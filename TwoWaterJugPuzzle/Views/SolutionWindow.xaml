@@ -5,11 +5,10 @@
         xmlns:VM="clr-namespace:TwoWaterJugPuzzle.ViewModels"
         FontSize="13"
         ResizeMode="NoResize"
-        
         Focusable="True"
         Height="400" Width="525"
         Loaded="OnWindowLoadedEventHandler">
-    <Grid>
+    <Grid Name="_gridControl">
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
             <RowDefinition/>
