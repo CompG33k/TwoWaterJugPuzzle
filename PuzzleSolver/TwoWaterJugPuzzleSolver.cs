@@ -127,11 +127,6 @@ namespace PuzzleSolver
         {
             return jug < jugMax;
         }
-
-        private static bool foo()
-        {
-            return true;
-        }
         #endregion
     }
 }
