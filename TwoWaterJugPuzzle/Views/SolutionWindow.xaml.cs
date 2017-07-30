@@ -15,7 +15,7 @@ namespace TwoWaterJugPuzzle.Views
     public partial class SolutionWindow : Window
     {
         #region Fields
-        private readonly BackgroundWorker _bw = new BackgroundWorker();
+        private readonly BackgroundWorker _bw = new BackgroundWorker() { WorkerSupportsCancellation =true};
         private readonly StringBuilder _instructions = new StringBuilder();
         private readonly StringBuilder _parameters = new StringBuilder();
         private WaterJugModel _jugModel;
