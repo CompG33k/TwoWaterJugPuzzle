@@ -68,6 +68,7 @@ namespace TwoWaterJugPuzzle.ViewModels
                         {
                             var vm = new SolutionViewModel(_a, _b, _c);
                             var w = new SolutionWindow(vm);
+                            w.Owner = Application.Current.MainWindow; 
                             w.ShowDialog();
                         }
                         else
