@@ -23,7 +23,7 @@
         {   
             var d = GreatestCommonDivisor(a, b);
             var number = c/d;
-            // The Diophantine equation Ax+By=C is solvable if and only if gcd(A, B) divides C as a integer.
+            // The Diophantine equation Ax+By=C is solvable if and only if gcd(A, B) divides C (integer value).
             return IsNumberAnInteger(number);
         }
 
