@@ -64,7 +64,7 @@ namespace TwoWaterJugPuzzle.ViewModels
                     () =>
                     {
                         //Validate user input if possible combination entry
-                        if (EquationProvider.IsBezoutsCoefficientsValid(A, B))
+                        if (EquationProvider.IsBezoutsCoefficientsValid(A, B, C))
                         {
                             var vm = new SolutionViewModel(_a, _b, _c);
                             var w = new SolutionWindow(vm);

@@ -1,5 +1,6 @@
 ﻿using PuzzleSolver.Classes;
 using System;
+using System.IO;
 using System.Text;
 
 namespace PuzzleSolver
@@ -18,6 +19,7 @@ namespace PuzzleSolver
             {
                 if (IsGoalReached(model.jugA, model.gallonsToFill) || IsGoalReached(model.jugB, model.gallonsToFill))
                 {
+                    sb.AppendLine("You are finished!");
                     return sb.ToString();
                 }
 

@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using System.Threading.Tasks;
 using System.Threading;
+using System.IO;
 
 namespace TwoWaterJugPuzzle.Views
 {
@@ -74,9 +75,14 @@ namespace TwoWaterJugPuzzle.Views
                 {
                     CreateSentenceInstructions();
                 }
-                catch (OutOfMemoryException ex)
+                catch (OutOfMemoryException)
                 {
                     MessageBox.Show("Too many steps to list...Please pick smaller numbers");
+                    Dispatcher.BeginInvoke(new Action(() => { this.Close(); }));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
                     Dispatcher.BeginInvoke(new Action(() => { this.Close(); }));
                 }
             });
@@ -99,7 +105,7 @@ namespace TwoWaterJugPuzzle.Views
                 }
             }
         }
-
+      
         private void UpdateUILogic(SolutionViewModel vm)
         {
             vm.Instructions = _instructions.ToString();
